@@ -1,0 +1,20 @@
+{
+  "name": "micro-portal",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "lerna run --parallel dev",
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run --parallel build:dev",
+    "c": "git-cz",
+    "clog": "cz-lerna-changelog -p angular -i CHANGELOG.md -w -r 0",
+    "deploy": "lerna version patch",
+    "deploy:minor": "lerna version minor",
+    "deploy:major": "lerna version major"
+  }
+}

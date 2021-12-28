@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="importmap-type" content="systemjs-importmap">
+    <link rel="stylesheet" href="/style/common.css">
+    <title>微前端入口</title>
+    <script type="systemjs-importmap">
+        {
+          "imports": <%= JSON.stringify(htmlWebpackPlugin.options.meta.all) %>
+        }
+    </script>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="preload" href="/js/single-spa.min.js" as="script" crossorigin="anonymous" />
+    <link rel="preload" href="/js/vue.min.js" as="script" crossorigin="anonymous" />
+    <!-- <script src="/app.js?<%= htmlWebpackPlugin.options.meta.outputTime%>"></script> -->
+    <script src='/js/minified.js'></script>
+    <script src="/js/import-map-overrides.js"></script>
+    <script src="/js/system.min.js"></script>
+    <script src="/js/amd.min.js"></script>
+    <script src="/js/named-exports.js"></script>
+    <script src="/js/named-register.min.js"></script>
+    <script src="/js/use-default.min.js"></script>
+</head>
+<body>
+    <script>
+        (function() {
+            Promise.all([
+                System.import('single-spa'),
+                System.import('vue'),
+                System.import('vue-router'),
+                System.import('element-ui')]).then(function (modules) {
+                    
+            var singleSpa = modules[0];
+            var Vue = modules[1];
+            var VueRouter = modules[2];
+            var ElementUi = modules[3];
+            Vue.use(VueRouter)
+            Vue.use(ElementUi)
+
+            <% for (let app in htmlWebpackPlugin.options.meta.route) { %>
+                singleSpa.registerApplication(
+                    '<%= app %>',
+                    function () {
+                        return System.import('<%= htmlWebpackPlugin.options.meta.route[app] %>')
+                    },
+                    function(location) {
+                        <% if (app !== 'navbar') { %>
+                            return location.pathname.split('/')[1] === '<%= app %>'
+                        <% } else { %>
+                            return true
+                        <% } %>
+                    })
+            <% } %>
+            
+            singleSpa.start();
+        })
+      })()
+    </script>
+    <import-map-overrides-full show-when-local-storage="overrides-ui"></import-map-overrides-full>
+</body>
+</html>
