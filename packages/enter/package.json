@@ -1,6 +1,6 @@
 {
   "name": "@micro-portal/enter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "微前端入口应用",
   "main": "index.js",
   "scripts": {
@@ -31,8 +31,8 @@
     "webpack-cli": "^3.3.10",
     "webpack-dashboard": "^3.2.0",
     "webpack-dev-middleware": "^3.7.2",
-    "webpack-hot-middleware": "^2.25.0",
     "webpack-dev-server": "^3.10.3",
+    "webpack-hot-middleware": "^2.25.0",
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
