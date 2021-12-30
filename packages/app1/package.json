@@ -1,6 +1,6 @@
 {
   "name": "@micro-portal/app1",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "微前端子应用1",
   "main": "index.js",
   "scripts": {

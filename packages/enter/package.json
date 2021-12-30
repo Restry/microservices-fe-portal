@@ -1,6 +1,6 @@
 {
   "name": "@micro-portal/enter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "微前端入口应用",
   "main": "index.js",
   "scripts": {
