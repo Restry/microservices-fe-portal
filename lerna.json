@@ -10,7 +10,7 @@
     }
   },
   "changelog": {
-    "repo": "gsm-platform",
+    "repo": "microservices-fe-portal",
     "labels": {
       "PR: New Feature": ":rocket: New Features",
       "PR: Breaking Change": ":boom: Breaking Changes",
