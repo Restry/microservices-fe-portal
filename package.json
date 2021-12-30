@@ -2,7 +2,12 @@
   "name": "micro-portal",
   "private": true,
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "commitizen": "^4.2.3",
+    "cz-lerna-changelog": "^2.0.3",
+    "husky": "^4.3.8"
   },
   "workspaces": [
     "packages/*"
@@ -16,5 +21,15 @@
     "deploy": "lerna version patch",
     "deploy:minor": "lerna version minor",
     "deploy:major": "lerna version major"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
