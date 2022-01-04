@@ -1,0 +1,22 @@
+{
+  "name": "tbf",
+  "version": "1.0.0",
+  "description": "micro-service frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Restry/transaction-banking-frontend.git"
+  },
+  "keywords": [
+    "micro-service"
+  ],
+  "author": "restry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Restry/transaction-banking-frontend/issues"
+  },
+  "homepage": "https://github.com/Restry/transaction-banking-frontend#readme"
+}
