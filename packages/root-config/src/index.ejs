@@ -36,7 +36,12 @@
       "imports": {
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
         "react": "https://cdn.jsdelivr.net/npm/react@17.0.1/umd/react.production.min.js",
-        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.1/umd/react-dom.production.min.js"
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.1/umd/react-dom.production.min.js",
+        "React": "https://cdn.jsdelivr.net/npm/react@17.0.1/umd/react.production.min.js",
+        "ReactDOM": "https://cdn.jsdelivr.net/npm/react-dom@17.0.1/umd/react-dom.production.min.js",
+        "antd":"https://cdn.jsdelivr.net/npm/antd@4.18.2/dist/antd.min.js",
+        "moment": "https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js",
+        "@ant-design/pro-form":"https://cdn.jsdelivr.net/npm/@ant-design/pro-form@1.52.5/dist/form.min.js"
       }
     }
   </script>
@@ -54,6 +59,7 @@
         "@tbf/layout": "//localhost:9001/tbf-layout.js",
         "@tbf/home": "//localhost:9002/tbf-home.js",
         "@tbf/app1": "//localhost:9003/tbf-app1.js",
+        "@tbf/footer": "//localhost:9005/tbf-footer.js",
         "@tbf/utils": "//localhost:9004/tbf-utils.js"
       }
     }
@@ -74,7 +80,8 @@
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
   <% } %>
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ant-design/pro-form@1.52.5/dist/form.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/antd@4.18.2/dist/antd.min.css"/>
 </head>
 <body>
   <noscript>

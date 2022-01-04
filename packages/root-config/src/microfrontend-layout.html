@@ -17,18 +17,25 @@
 
   -->
 
-  <main>
+  <main class="ant-layout layout">
     <nav>
       <application name="@tbf/layout"></application>
     </nav>
-    <route default>
-      <application name="@single-spa/welcome"></application>
-    </route>
-    <route path="home">
-      <application name="@tbf/home"></application>
-    </route>
-    <route path="app1">
-      <application name="@tbf/app1"></application>
-    </route>
+    <div class="site-layout-content" style="padding: 2em 0;">
+        
+      <route default>
+        <application name="@single-spa/welcome"></application>
+      </route>
+      <route path="home">
+        <application name="@tbf/home"></application>
+      </route>
+      <route path="app1">
+        <application name="@tbf/app1"></application>
+      </route>
+    </div>
+
+    <footer>
+      <application name="@tbf/footer"></application>
+    </footer>
   </main>
 </single-spa-router>

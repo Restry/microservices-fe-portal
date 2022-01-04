@@ -1,7 +1,7 @@
 {
-  "name": "@tbf/app1",
+  "name": "@tbf/footer",
   "scripts": {
-    "start": "webpack serve --port=9003",
+    "start": "webpack serve --port=9005",
     "start:standalone": "webpack serve --env standalone",
     "build": "concurrently pnpm:build:*",
     "build:webpack": "webpack --mode=production",
@@ -15,7 +15,6 @@
     "build:types": "tsc"
   },
   "devDependencies": {
-    "@ant-design/pro-form": "^1.52.5",
     "@babel/core": "^7.15.0",
     "@babel/eslint-parser": "^7.15.0",
     "@babel/plugin-transform-runtime": "^7.15.0",
@@ -61,5 +60,5 @@
     "single-spa": "^5.9.3",
     "single-spa-react": "^4.3.1"
   },
-  "types": "dist/tbf-app1.d.ts"
+  "types": "dist/tbf-footer.d.ts"
 }
