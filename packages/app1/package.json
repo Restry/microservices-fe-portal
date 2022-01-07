@@ -1,7 +1,7 @@
 {
   "name": "@tbf/app1",
   "scripts": {
-    "start": "webpack serve --port=9003",
+    "start": "webpack serve --port=8003",
     "start:standalone": "webpack serve --env standalone",
     "build": "concurrently pnpm:build:*",
     "build:webpack": "webpack --mode=production",

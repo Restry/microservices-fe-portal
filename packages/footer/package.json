@@ -1,7 +1,7 @@
 {
   "name": "@tbf/footer",
   "scripts": {
-    "start": "webpack serve --port=9005",
+    "start": "webpack serve --port=8005",
     "start:standalone": "webpack serve --env standalone",
     "build": "concurrently pnpm:build:*",
     "build:webpack": "webpack --mode=production",

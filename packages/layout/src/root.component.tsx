@@ -4,6 +4,7 @@ const { Header, Content, Footer } = Layout;
 
 
 export default function Root(props) {
+  console.log('layout header render');
   return <Header>
     <div className="logo" />
     <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['home']}>
